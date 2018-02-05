@@ -4,14 +4,15 @@
 #ifndef MY_HEADER_HPP
 #define MY_HEADER_HPP
 
-int plusgrand(int a, int b, int c)
+void exo1 (void)
 {
-	if (a < b && b < c)
-		return c;
-	if (a < b && c < b)
-		return b;
-	if (b < a && c < a)
-		return a;
+	long a = 2, b = 1, c = 0;
+	while (a + b > 0)
+	{
+		a = a - 2;
+		b = b + 1;
+		c = c + 1;
+	}
 }
 
 #endif // MY_HEADER_HPP

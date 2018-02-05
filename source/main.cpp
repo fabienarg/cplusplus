@@ -7,7 +7,6 @@
 
 int main()
 {
-	int maximum = plusgrand(14, 20, 25);
-    printf ("Le maximum est :", maximum);
-    return 0;
+	exo1();
+	return 0;
 }
