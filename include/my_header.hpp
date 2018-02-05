@@ -5,6 +5,8 @@
 #define MY_HEADER_HPP
 #include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
+#include <time.h>
 
 void exo1 (void)
 {
@@ -32,6 +34,10 @@ void exo2(void)
 			fac = 0;
 }
 
+
+
+
+
 int essayer_code(unsigned short code)
 {
 	srand(time(NULL));
@@ -42,12 +48,38 @@ int essayer_code(unsigned short code)
 
 void exo3(void)
 {
-	unsigned short i;
-	while (i != essayer_code);
-		i++;
+	unsigned short n = 0;
+	while (essayer_code(n) != 1);
+		n++;
+		std::cout << n << std::endl;
+}
 
-	std::cout << i << std::endl;
+unsigned short lancer_de(void)
+{
+	srand(time(NULL));
+	return (rand() % 6) + 1;
+}
+void exo4(void)
+{
+	int nombreDePoints = 0;
+	unsigned short n = 0;
+	while (n != 1)
+	{
+		n = lancer_de();
 
+		if (n == 2 || n == 4 || n == 6)
+		{
+			nombreDePoints = nombreDePoints + n;
+		}
+		else if (n == 3)
+		{
+			nombreDePoints = nombreDePoints * 2;
+		}
+		else if (n == 5)
+		{
+			nombreDePoints = 0;
+		}
+	}
 }
 
 #endif // MY_HEADER_HPP

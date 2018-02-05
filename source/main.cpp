@@ -4,11 +4,13 @@
 #include <iostream>
 #include <my_header.hpp>
 #include <algorithm>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-	exo1();
-	exo2();
-	exo3();
+/*	exo1();
+	exo2(); */
+	exo4();
 	return 0;
 }
